@@ -1,7 +1,7 @@
 {
   "name": "01_json_to_html-parser",
   "version": "1.0.0",
-  "description": "Moje pierwsze CLI",
+  "description": "JSON to HTML - CLI parser",
   "main": "index.js",
   "type": "module",
   "author": "",
