@@ -1,7 +1,7 @@
 import program from 'commander';
 
 import * as CONSTANTS from './common/variables.js';
-import { basicListPath } from './paths/paths.js';
+import { basicListPath, basicTablePath } from './paths/paths.js';
 
 program
   .version('1.0.0')
@@ -16,6 +16,18 @@ program
     try {
       const listTemplate = type === 'ol' ? CONSTANTS.OL_BASIC_TEMPLATE : CONSTANTS.UL_BASIC_TEMPLATE;
       await basicListPath(listTemplate, title);
+    } catch (err) {
+      console.log(err);
+    }
+  });
+
+program
+  .command('table')
+  .alias('t')
+  .option('-t, --title [title]', 'title for your HTML')
+  .action(async ({ title }) => {
+    try {
+      await basicTablePath(CONSTANTS.TABLE_BASIC_TEMPLATE, title);
     } catch (err) {
       console.log(err);
     }
