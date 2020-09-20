@@ -10,11 +10,11 @@ import { getTableTemplate, fillTableTemplateWithDataBasic } from '../table/table
 
 export const basicListPath = async (listTemplateFile, title = 'Title unset') => {
   try {
-    // Fill UL list with fav games
+    // Fill the UL list
     const parsedListBasicJson = await getInputData();
     const listTemplate = await getListTemplate(listTemplateFile);
     const completeList = fillListTemplateWithDataBasic(listTemplate, parsedListBasicJson);
-    // Incorporate filled list into basic HTML template
+    // Incorporate the filled list into a basic HTML template
     const template = await getHTMLTemplate();
     const filledTemplate = fillTemplateWithData(template, title, completeList);
     await saveOutputHTML(filledTemplate);
@@ -25,11 +25,11 @@ export const basicListPath = async (listTemplateFile, title = 'Title unset') => 
 
 export const basicTablePath = async (listTemplateFile,  title = 'Title unset') => {
   try {
-    // Fill table with data
+    // Fill the table with data
     const parsedTableBasicJson = await getInputData(TABLE_BASIC_INPUT);
     const tableTemplate = await getTableTemplate(listTemplateFile);
     const completeTable = fillTableTemplateWithDataBasic(tableTemplate, parsedTableBasicJson);
-    // Incorporate filled table into basic HTML template
+    // Incorporate the filled table into a basic HTML template
     const template = await getHTMLTemplate();
     const filledTemplate = fillTemplateWithData(template, title, completeTable);
     await saveOutputHTML(filledTemplate);

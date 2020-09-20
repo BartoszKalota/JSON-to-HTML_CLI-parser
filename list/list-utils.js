@@ -4,7 +4,8 @@ import { UL_BASIC_TEMPLATE } from '../common/variables.js';
 
 export const getListTemplate = async (fileName = UL_BASIC_TEMPLATE) => {
   try {
-    return await fs.promises.readFile(fileName, 'utf-8');
+    const content = await fs.promises.readFile(fileName, 'utf-8');
+    return content;
   } catch (err) {
     console.log(err);
   }
