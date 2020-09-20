@@ -10,7 +10,7 @@ program
 program
   .command('list')
   .alias('l')
-  .option('-tp, --type [type]', 'order (ol) or unorder (ul) list - default is ul')
+  .option('-tp, --type [type]', 'ordered (ol) or unordered (ul) list - default is ul')
   .option('-t, --title [title]', 'page title for your HTML')
   .action(async ({ type, title }) => {
     try {
