@@ -10,8 +10,8 @@ program
 program
   .command('list')
   .alias('l')
-  .option('-tp, --type [type]', 'order (ol) or unorder (ul) list, default is ul')
-  .option('-t, --title [title]', 'title for your HTML')
+  .option('-tp, --type [type]', 'order (ol) or unorder (ul) list - default is ul')
+  .option('-t, --title [title]', 'page title for your HTML')
   .action(async ({ type, title }) => {
     try {
       const listTemplate = type === 'ol' ? CONSTANTS.OL_BASIC_TEMPLATE : CONSTANTS.UL_BASIC_TEMPLATE;
@@ -24,7 +24,7 @@ program
 program
   .command('table')
   .alias('t')
-  .option('-t, --title [title]', 'title for your HTML')
+  .option('-t, --title [title]', 'page title for your HTML')
   .action(async ({ title }) => {
     try {
       await basicTablePath(CONSTANTS.TABLE_BASIC_TEMPLATE, title);
