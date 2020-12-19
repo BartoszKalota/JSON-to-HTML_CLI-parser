@@ -1,6 +1,9 @@
 ﻿# JSON to HTML - CLI parser (Workshop-1, Node.js)
 A command-line interface (CLI) tool generating a simple site basing on a HTML template and JSON-formatted data. The project is the part of the Coders Lab course.
 
+# Video demo
+[![Watch the video](./images/video-demo.jpg)](https://youtu.be/mV4OnyZnWXg)
+
 # Available forms of data presentation
 ## List
 To generate an ordered list, type:
